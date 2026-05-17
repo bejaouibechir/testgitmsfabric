@@ -78,3 +78,27 @@ display(health_df.select(
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
+
+# CELL ********************
+
+# test
+from pyspark.sql.functions import col, when, lit
+
+health_df = health_df.withColumn(
+    "HealthStatus",
+    when(col("LoadPct") > 95, lit("OVERLOAD")).otherwise(col("HealthStatus"))
+)
+
+health_df.write.mode("overwrite").format("delta").saveAsTable("gold_equipment_health")
+
+display(
+    health_df.select("EquipmentId", "EquipmentName", "LoadPct", "HealthStatus")
+             .orderBy("LoadPct", ascending=False)
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
