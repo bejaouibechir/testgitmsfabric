@@ -22,6 +22,7 @@
 
 # CELL ********************
 
+# ajout de commentaire 
 from pyspark.sql.functions import col, to_timestamp
 
 readings_path = "Files/input/energy/equipment_readings.csv"
