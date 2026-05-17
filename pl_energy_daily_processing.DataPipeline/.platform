@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pl_energy_daily_processing"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "58f5fd17-362b-9335-4f31-d2c0977229cc"
+  }
+}

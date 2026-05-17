@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_01_ingest_energy_files"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2fc75ade-5ae7-9b54-442e-ed33a46bd35b"
+  }
+}
